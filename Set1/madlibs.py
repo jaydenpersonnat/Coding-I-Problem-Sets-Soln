@@ -61,3 +61,20 @@ Example Run (in terminal):
 """
 
 # Code goes below 
+
+# Get user input for each field 
+name = input("Enter a name: ")
+adjective1 = input("Enter an adjective: ")
+adjective2 = input("Enter another adjective: ")
+adverb = input("Enter an adverb: ")
+food1 = input("Enter a food: ")
+food2 = input("Enter another food: ")
+noun = input("enter a noun: ")
+place = input("Enter a place: ")
+verb = input("Enter a verb: ")
+
+# print sentences 
+print(f"{name} was planning a dream vacation to {place}.")
+print(f"{name} was especially looking forward to trying the local cuisine, including {adjective1} {food1} and {adjective2} {food2}.")
+print(f"{name} will have to practice the language {adverb} to make it easier to {verb} with people.")
+print(f"{name} has a long list of sights to see, including the {noun} museum and the {adjective1} river.")

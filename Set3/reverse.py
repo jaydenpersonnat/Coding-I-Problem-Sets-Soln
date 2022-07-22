@@ -32,3 +32,27 @@ Done?
 """
 
 # Code goes below 
+
+string = input("Please enter a string: ")
+
+stuff = ""
+
+for char in string:
+    stuff = char + stuff
+
+print(stuff)
+
+
+# Using reversed () 
+
+string = input("Please enter a string: ")
+
+reversed_lst = list(reversed(string))
+
+print("".join(reversed_lst))
+
+
+# It can be even shorter using string slicing! 
+
+name = input("Enter a string: ")[::-1]
+print(name)

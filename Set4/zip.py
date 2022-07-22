@@ -24,3 +24,20 @@ list of integers [1, 2, 2, 3, 4, 5, 5, 5, 6, 6, 7].
 """
 
 # Code goes below 
+def zip(lst):
+    dict = {}
+    visited = [] 
+    for element in lst:
+        if element not in visited:
+            dict[element] = lst.count(element)
+            visited.append(element)
+    return dict 
+
+def unzip(dict): 
+    lst = []
+    for key in dict:
+        for i in range(dict[key]):
+            lst.append(key)
+
+    return lst
+

@@ -171,11 +171,6 @@ Your Mission:
 """
 
 # Code goes below 
-"""
-Tic-Tac-Toe
-Maria V Zlatkova
-CS50 at HSA, July 2018
-"""
 
 def print_board(board):
     """ Pretty prints 3 x 3 Tic-Tac-Toe board """
@@ -187,55 +182,38 @@ def print_board(board):
     print('|' + board[2][0] + '|' + board[2][1] + '|' + board[2][2] + '|')
     print(' -----\n')
 
-
 def winner(board):
-    """ TODO Determine whether game has been won """
+    """ TODO Determine whether game has been won """  
+    for row in range(3):
+        if board[row][0] == board[row][1] == board[row][2]:
+            return True
+        
+    for col in range(3):
+        if board[0][col] == board[1][col] == board[2][col]:
+            return True
+    
+    if board[0][0] == board[1][1] == board[2][2] \
+       or board[2][0] == board[1][1] == board[0][2]:
+        return True
+    
     return False
 
 def stalemate(board):
     """ TODO Determine whether game has resulted in a stalemate """
-    return False
+    for row in range(3):
+        for col in range(3):
+            if board[row][col] != "O" and board[row][col] != "X":
+                return False
+    return True
 
 def main():
     # Create list of lists to represent the Tic-Tac-Toe board
     board = [[] for _ in range(0,3)]
 
-    # list comprehension 
-    # empty nested list
-    board = [[], [], []]
-
     # Populate board with the numbers 1-9
     for row in range(0,3):
         for col in range(0,3):
             board[row].append(str(row * 3 + col + 1))
-    row = 0 
-    col = 0 
-
-    board[0].append("1")
-
-    board[0] = ["1"]
-    
-    row = 0 
-    col = 1 
-    board[0].append("2")
-    board[0] = ["1", "2"]
-
-    row = 0 
-    col = 2
-    board[0] = ["1", "2", "3"]
-
-    # Reset
-    row = 1 
-    col = 0 
-    board[1].append("4")
-    board[1] = ["4", "5", "6"]
-
-
-    for i in range(0, 3):
-        print(i, end = " ")
-
-    # 0, 1, 2 
-    
 
     # Begin with player 1 and symbol X
     X = True

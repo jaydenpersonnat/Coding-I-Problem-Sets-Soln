@@ -64,13 +64,16 @@ LOWER_START = 97
 ALPHA = 26
 
 key = int(input("Key: "))
-plainText= input("Plaintext: ")
+plainText = input("Plaintext: ")
+
+def convert(char, constant, key):
+    return chr((ord(char) - constant + key) % ALPHA + constant)
 
 for char in plainText:
     if char.isupper():
-        print(chr((ord(char) - UPPER_START + key) % ALPHA + UPPER_START), end="")
+        print(convert(char, UPPER_START, key), end="")
     elif char.islower():
-        print(chr((ord(char) - LOWER_START + key) % ALPHA + LOWER_START), end="")
+        print(convert(char, LOWER_START, key), end="")
     else:
         print(char, end="")
 print()

@@ -19,3 +19,13 @@ Your Mission:
 """
 
 # Code goes below here 
+
+numOfItems = int(input("Enter a number: "))
+
+shopping_lst = [] 
+
+for i in range(numOfItems):
+    item = input("Enter an item: ")
+    shopping_lst.append(item)
+
+print(shopping_lst)

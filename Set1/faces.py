@@ -15,7 +15,7 @@ Face 0:
 :P
 
 Face 1:
-^  ^
+^  ^ 
 ____
 
 Face 2: 
@@ -41,12 +41,25 @@ Face 4 (Toilet):
 # Code goes below! 
 
 # Face 0 
+print(":P\n") 
 
 # Face 1 
+print("^ ^\n___\n")
 
 # Face 2 
+print("' '\n . \n~~~\n")
 
-
-# Gameboy 
+# Gamboy 
+print(" ___\n|[_]|\n|+ ;|\n`---'")
 
 # Toilet 
+print('''
+     _
+    | |
+ ___| |
+(    .'
+ )  ( 
+    ''')
+
+
+

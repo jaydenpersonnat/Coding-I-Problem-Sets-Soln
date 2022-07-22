@@ -80,3 +80,42 @@ Specification:
 """
 
 # Code goes below 
+UPPER_START = 65
+LOWER_START = 97
+ALPHA = 26
+
+key = input("key: ").upper()
+plaintext = input("plaintext: ")
+
+# Converts char to number such that A - 0, B - 1, ..., Z - 25
+def convert_to_num(char): 
+    if char.isupper():
+        return ord(char) - UPPER_START
+    else:
+       return ord(char) - LOWER_START 
+
+# Inverse of convert_to_num and preserves case  
+def convert_to_char(char, num):
+    if char.isupper():
+        return chr(ci + UPPER_START)
+    else:
+        return chr(ci + LOWER_START)
+
+# Set index to keep track of position in key 
+index = 0 
+
+# loop through each character in plaintext and convert to ciphertext 
+for char in plaintext: 
+    if not char.isupper() and not char.islower(): 
+        print(char, end= "")
+    else:
+        ci = (convert_to_num(char) + convert_to_num(key[index % len(key)])) % ALPHA 
+        print(convert_to_char(char, ci), end = "")
+        index += 1 
+
+print()
+
+
+
+    
+

@@ -41,3 +41,22 @@ Example Runs:
 """
 
 # Code goes below 
+
+
+
+string = input("Enter string: ")
+
+counter_chars = 0 
+words = 0 
+
+string = string.title() 
+
+for char in string:
+    # count number of characters 
+    counter_chars += 1
+    # count number of words 
+    if char.isupper():
+        words += 1
+
+print(f"Number of words in string:\n{words}")
+print(f"Number of characters in string:\n{counter_chars}")

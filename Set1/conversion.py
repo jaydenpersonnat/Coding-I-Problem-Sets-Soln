@@ -24,10 +24,30 @@ Your Mission:
 
 # Problem 0 
 print("Problem 0")
-# TODO: Replace this TODO with code for Problem 0  
+
+# Code 
+
+# Get user input for hours and minutes 
+hrs = input("Hours: ")
+minutes = input("Minutes: ")
+
+# Calculate total minutes and print 
+total_min = int(hrs) * 60 + int(minutes)
+
+print(f"Minutes: {total_min}")
+
 print()
 
 # Problem 1 
 print("Problem 1")
-# Replace TODO with code for Problem 1 
+# Code 
+
+# Get user input for hours and minutes 
+hrs = input("Hours: ")
+minutes = input("Minutes: ")
+
+# Calculate total hours and print 
+total_hrs = int(hrs) + int(minutes) / 60
+
+print(f"Hours: {total_hrs}")
 

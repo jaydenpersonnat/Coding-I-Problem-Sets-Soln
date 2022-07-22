@@ -39,3 +39,20 @@ More Examples:
 
 # Code goes below 
 
+# Get user input for numbers and operation 
+fst_num = float(input("First number: "))
+operation = input("Operation: ")
+snd_num = float(input("Second number: "))
+
+# Calculate final result and print 
+if operation == "+": 
+    print(fst_num + snd_num)
+elif operation == "x": 
+    print(fst_num * snd_num)
+elif operation == "-":
+    print(fst_num - snd_num)
+elif operation == "/":
+    print(fst_num / snd_num)
+else:
+    print(fst_num ** snd_num)
+

@@ -18,3 +18,19 @@ Your Mission:
 """
 
 # Code goes below 
+
+
+def main():
+    goalNum = int(input("Number of times your chasers got the quaffle through a hoop: "))
+    snitchCaught = int(input("Did your team's seeker catch the snitch? Enter 1 if true, 0 otherwise: "))
+    score = final_score(goalNum, snitchCaught)
+    print("Your team's final score is: " + str(score))
+
+def final_score(goals, snitchCaught): 
+    if snitchCaught == 1:
+        return goals * 10 + 150
+    else: 
+        return goals * 10 
+
+if __name__ == "__main__":
+    main()

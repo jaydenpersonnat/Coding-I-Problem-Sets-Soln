@@ -5,37 +5,11 @@ Create a program that prints the following shape with a user-inputted height:
 
 ~/workspace/ $ mario.py
 height: 5
-    ## - 4 spaces / line # : 0   
-   ### - 3 spaces / line # : 1 
-  #### - 2 spaces / line # : 2 
- ##### - 1 space / line # : 3 
-###### - 0 spaces / line # : 4 
-
-How can we relate the variable line number to the number of the hashes there are? 
-line = 0 
-hashes = 2 
-
-line = 1 
-hashes = 3 
-
-line = 4 
-hashes = 6 
-
-line + 2 = hashes 
-
-height = 5 
-line = 0 
-spaces = 4 
-
-height = 5 
-line = 1 
-spaces = 3 
-
-height - line - 1 = spaces 
-5 - 0 - 1 = 4 
-
-5 - 1 - 1 = 3 
-
+    ##
+   ###
+  ####
+ #####
+######
 
 
 Specification: 
@@ -45,5 +19,22 @@ Specification:
 """
 
 # Code goes below here 
+while True: 
+    height = int(input("height: "))
+    if height >= 0 and height <= 23:
+        break
+    
+for line in range(height): 
+    # print spaces
+    for spaces in range(height - line - 1):
+        print(" ", end = "")
+    
+    # print blocks 
+    for hashes in range(line + 2):
+        print("#", end = "")
 
-# Goal: print the pryamid using spaces and hashes 
+    # Print newline 
+    print() 
+
+
+

@@ -24,3 +24,16 @@ Your Mission:
 
 
 # Code goes below 
+
+# Get user input for the current hour and # of hrs passed 
+current_hr = input("What hour is it? ")
+hrs_passed = input("How many hours will pass? ")
+
+# Calculate the new hr and print result 
+
+new_hr = (int(current_hr) + int(hrs_passed)) % 12 
+
+if new_hr == 0: 
+    new_hr = 12 
+
+print(f"In {hrs_passed} hours it will be {new_hr} o' clock")
