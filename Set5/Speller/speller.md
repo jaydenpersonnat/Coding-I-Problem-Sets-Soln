@@ -6,7 +6,7 @@ Implement a program that spell-checks a file, per the below.
 ## Background 
 Let’s build ourselves a very simple spellchecker and actually use it to check 
 the spelling of a number of texts! We’re going to do so using Python to implement 
-our spellchecked, but first we’re going to take a look at classes, methods and file input/output.
+our spellchecker, but first we’re going to take a look at classes, methods and file input/output.
 
 #### Classes 
 In the real world, there are often entities that we want to represent that aren’t 
@@ -128,12 +128,12 @@ dictionary against which to reference the correct spelling of worlds.
 
 You’re going to tackle a few TODO’s in dictionary.py.
 
-0. ```def __init__self()```
+0. ```def __init__self()``` <br> 
 In the init method we’ll want to initializa the dictionary, and in order to do so, 
 you should create the words instance variable and assign it to an empty set, 
 where you will store the words contained in the dictionary.
 
-1. ```def check(self, word)```
+1. ```def check(self, word)``` <br> 
 In this method, you’ll want to check whether a given word is present in the 
 dictionary. In order to do so, you are passed the word argument, which itself is 
 a string coming from the text that is being spellchecked. You should return True 
@@ -146,7 +146,7 @@ to manipulate the word variable passed into this method to make it all lowercase
 as well before you check whether it is contained in the set of words.
 
 
-2. ```def load(self, dictionary)```
+2. ```def load(self, dictionary)``` <br> 
 In this method, you’ll want to load the words from the dictionary file. You’ll 
 want to accomplish to following things:
     1. Open the dictionary file 
@@ -163,7 +163,7 @@ want to accomplish to following things:
 
     3. Close the file and return ```True``` when you are done working with the file
 
-3. ```def size(self)```
+3. ```def size(self)``` <br> 
 In this method, you’ll want to return the total size of the dictionary.
 
 Hint: Given that all the words in the dictionary should we stored in the words 
@@ -173,10 +173,10 @@ instance variable, how might you get the total number of words in that set?
 To run and test your program, you’ll want to execute:
 
 ```
-python speller.py <text>
+python speller.py {text}
 ```
 
-Where <text> stands for the path to a text you might want to spellcheck. 
+Where {text} stands for the path to a text you might want to spellcheck. 
 You have a few options to choose from:
 
 ```
@@ -205,7 +205,7 @@ Number of misspelled words: 16143
 For birdman.txt, the expected output should be: 
 ```
 Total number of words in text: 21714
-Number of misspelled words: 11157
+Number of misspelled words: 1568
 ```
 
 For constitution.txt, the expected output should be: 
@@ -234,25 +234,6 @@ Number of misspelled words: 1304
 
 For shakespeare.txt, the expected output should be: 
 ```
-Total number of words in text: 130806
-Number of misspelled words: 6777
+Total number of words in text: 899787
+Number of misspelled words: 45934
 ```
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
